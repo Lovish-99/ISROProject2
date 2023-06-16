@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styleb.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">RealTime Analysis</label>
+        <ul>
+            <li><a class="active" href="{% url 'room' %}">DataHub</a></li>
+            <li><a href="{% url 'feedback' %}">Visualize</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li><button type="submit" class="btn" style="background-color: #0082e6;">
+                <a href="{% url 'signout' %}">SignOut</a>
+            </button></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <script src="{% static 'main6.js' %}"></script>
+    <div class="grid-container">
+        <div class="grid-1">
+            <div class="sidebar">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h1>Water<br><span>Analysis</span></h1><br>
+                    <input type="radio" onclick="javascript:yesnoCheck();" value="Site1A" name="yesno" id="yesCheck" style="height: 18px;width: 18px;">
+                    <label for="yesCheck"><a href="http://125.19.52.219/wqi/">CPCB Water Quality Site 1_A</a></label><br>
+                    
+                    <input type="radio" onclick="javascript:yesnoCheck();" value="Site1B" name="yesno" id="yesCheck2" style="height: 18px;width: 18px;">
+                    <label for="yesCheck2"><a href="http://125.19.52.219/wqi/">CPCB Water Quality Site 1_B</a></label><br>
+                    
+                    <input type="radio" onclick="javascript:yesnoCheck();" value="Site1C" name="yesno" id="yesCheck3" style="height: 18px;width: 18px;">
+                    <label for="yesCheck3"><a href="http://125.19.52.219/wqi/">CPCB Water Quality Site 1_C</a></label><br>
+                    
+                    <input type="radio" onclick="javascript:yesnoCheck();" value="Site2" name="yesno" id="noCheck" style="height: 18px;width: 18px;">
+                    <label for="noCheck"><a href="http://125.19.52.218/realtime/">CPCB Water Quality Site 2</a></label><br>
+                    
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 270px;">
+                    <div class="idn" id="hid">
+                        <h4>Site : {{ nm2|safe }}</h4>
+                        <h4>Para : {{ nm|safe }}</h4>
+                    </div>
+                    <div id="ifY" style="visibility: visible;">
+                        <label style="font-size: 20px; line-height: 2.5;">Select a Parameter :</label><br>
+                        <select id="ifYes" style="width: 220px; height: 30px;" name="pname">
+                            <option selected disabled="true">----------Select an Option----------</option>
+                        </select>
+                        <input type="submit" value="Insert" class="inst">
+                    </div>
+                </form>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 270px;">
+            </div>
+        </div>
+        <div class="grid-2">
+            {{ m|safe }}
+        </div>
+    </div>
+    
+    <footer class="page-footer">
+        <div class="container2" style="margin-right: 15px;">
+            <div class="row">
+                <div class="col-md-3 mb-4" id="i1">
+                    <h6 class="text-uppercase font-weight-bold">RIVER GANGA</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;height: 5px;">
+                    <p style="color: rgba(255, 255, 255, 0.979); line-height: 1.5;">Ganga basin is the largest river basin in India in terms of catchment area, constituting 26% of the 
+                        country's land mass (8,61,404 Sq. km) and supporting about 43% of its population (448.3 million as per 2001 census). The basin lies between East longitudes 73°02’ and 89°05’ and North latitudes of 21°06’ and 31°21’, covering an area of 1,086,000 sq km, extending over India, Nepal and Bangladesh.</p>
+                </div>
+                <div class="col-md-3 mb-4" id="i1">
+                    <h6 class="text-uppercase font-weight-bold">Water Parameter</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;height: 5px;">
+                    <p class="p3"><a href="#!" style="color: white;">Dissolved Oxygen</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">Bio Chemical Demand</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">Turbidity</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">Total Coliform</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">pH</a></p>
+                </div>
+                <div class="col-md-3 mb-4" id="i1">
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;height: 5px;">
+                    <p><a href="https://cpcb.nic.in/" style="color: white;">CPCB</a></p>
+                    <p class="p3"><a href="https://nmcg.nic.in/" style="color: white;">NMCG</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">Feedback</a></p>
+                    <p class="p3"><a href="#!" style="color: white;">Help</a></p>
+                </div>
+                <div class="col-md-3 mb-4" id="i1">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;height: 5px;">
+                    <p class="p3"><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p class="p3"><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p class="p3"><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p class="p3"><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #B0E0E6;">
+            <div class="container">
+                <div class="ft1">
+                    <h3 class="mb-0">Get connected with us on social networks!</h3>
+                </div>
+                <div class="ft2"> 
+                    <a href="#" class="a-ic"><i class="fab fa-facebook white-text fa-2x"> </i></a>
+                    <a href="#" class="a-ic"><i class="fab fa-twitter white-text fa-2x"> </i></a>
+                    <a href="#" class="a-ic"><i class="fab fa-google-plus-g white-text fa-2x"> </i></a>
+                    <a href="#" class="a-ic"><i class="fab fa-linkedin-in white-text fa-2x"> </i></a>
+                    <a href="#" class="a-ic"><i class="fab fa-instagram white-text fa-2x"> </i></a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="abc">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/" style="color: white;"> RiverGanga.com</a>
+        </div>-->
+    </footer>
+</body>
+</html>

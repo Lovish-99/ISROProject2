@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.w3.org/2005/Atom">
+<title>Sentinels Scientific Data Hub search results for: platformname:Sentinel-1 AND footprint: "Intersects(12, 45)" AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]</title>
+<subtitle>Displaying 0 to 0 of 47 total results. Request done in 1.545 seconds.</subtitle>
+<updated>2022-01-24T05:51:42.735Z</updated>
+<author>
+<name>Sentinels Scientific Data Hub</name>
+</author>
+<id>https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: "Intersects(12, 45)" AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]</id>
+<opensearch:totalResults>47</opensearch:totalResults>
+<opensearch:startIndex>0</opensearch:startIndex>
+<opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+<opensearch:Query role="request" searchTerms="platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]" startPage="1"/>
+<link rel="self" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]&amp;start=0&amp;rows=1"/>
+<link rel="first" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]&amp;start=0&amp;rows=1"/>
+<link rel="next" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]&amp;start=1&amp;rows=1"/>
+<link rel="last" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; AND ingestiondate:[2021-11-19T00:00:00.000Z TO 2022-01-21T00:00:00.000Z]&amp;start=46&amp;rows=1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_description.xml"/>
+<entry>
+<title>S1A_IW_SLC__1SDV_20220116T025212_20220116T025239_041480_04EEB7_69DB</title>
+<link href="https://apihub.copernicus.eu/apihub/odata/v1/Products('60258ebc-6368-4721-aac2-8a19125bcb13')/$value"/>
+<link rel="alternative" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('60258ebc-6368-4721-aac2-8a19125bcb13')/"/>
+<link rel="icon" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('60258ebc-6368-4721-aac2-8a19125bcb13')/Products('Quicklook')/$value"/>
+<id>60258ebc-6368-4721-aac2-8a19125bcb13</id>
+<summary>Date: 2022-01-16T02:52:12.14Z, Instrument: SAR-C SAR, Mode: VV VH, Satellite: Sentinel-1, Size: 6.97 GB</summary>
+<ondemand>false</ondemand>
+<date name="beginposition">2022-01-16T02:52:12.14Z</date>
+<date name="endposition">2022-01-16T02:52:39.084Z</date>
+<date name="ingestiondate">2022-01-16T10:48:37.568Z</date>
+<int name="missiondatatakeid">323255</int>
+<int name="orbitnumber">41480</int>
+<int name="lastorbitnumber">41480</int>
+<int name="relativeorbitnumber">108</int>
+<int name="lastrelativeorbitnumber">108</int>
+<int name="slicenumber">4</int>
+<str name="filename">S1A_IW_SLC__1SDV_20220116T025212_20220116T025239_041480_04EEB7_69DB.SAFE</str>
+<str name="format">SAFE</str>
+<str name="identifier">S1A_IW_SLC__1SDV_20220116T025212_20220116T025239_041480_04EEB7_69DB</str>
+<str name="size">6.97 GB</str>
+<str name="status">ARCHIVED</str>
+<str name="timeliness">Fast-24h</str>
+<str name="sensoroperationalmode">IW</str>
+<str name="swathidentifier">IW1 IW2 IW3</str>
+<str name="orbitdirection">DESCENDING</str>
+<str name="producttype">SLC</str>
+<str name="platformname">Sentinel-1</str>
+<str name="platformidentifier">2014-016A</str>
+<str name="instrumentname">Synthetic Aperture Radar (C-band)</str>
+<str name="instrumentshortname">SAR-C SAR</str>
+<str name="productclass">S</str>
+<str name="polarisationmode">VV VH</str>
+<str name="acquisitiontype">NOMINAL</str>
+<str name="gmlfootprint">&lt;gml:Polygon srsName="http://www.opengis.net/gml/srs/epsg.xml#4326" xmlns:gml="http://www.opengis.net/gml"&gt;
+   &lt;gml:outerBoundaryIs&gt;
+      &lt;gml:LinearRing&gt;
+         &lt;gml:coordinates&gt;10.880881,45.323830 11.326329,43.061878 12.951792,43.382511 12.510495,45.658546 10.880881,45.323830&lt;/gml:coordinates&gt;
+      &lt;/gml:LinearRing&gt;
+   &lt;/gml:outerBoundaryIs&gt;
+&lt;/gml:Polygon&gt;</str>
+<str name="footprint">MULTIPOLYGON (((45.32383 10.880881, 45.658546 12.510495, 43.382511 12.951792, 43.061878 11.326329, 45.32383 10.880881)))</str>
+<str name="uuid">60258ebc-6368-4721-aac2-8a19125bcb13</str>
+</entry>
+</feed>

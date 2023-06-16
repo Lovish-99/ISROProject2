@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.w3.org/2005/Atom">
+<title>Sentinels Scientific Data Hub search results for: platformname:Sentinel-1 AND footprint: "Intersects(82.4, 21.16)" AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]</title>
+<subtitle>Displaying 0 results. Request done in 1.783 seconds.</subtitle>
+<updated>2022-03-03T06:43:45.273Z</updated>
+<author>
+<name>Sentinels Scientific Data Hub</name>
+</author>
+<id>https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: "Intersects(82.4, 21.16)" AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]</id>
+<opensearch:totalResults>0</opensearch:totalResults>
+<opensearch:startIndex>0</opensearch:startIndex>
+<opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+<opensearch:Query role="request" searchTerms="platformname:Sentinel-1 AND footprint: &quot;Intersects(82.4, 21.16)&quot; AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]" startPage="1"/>
+<link rel="self" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(82.4, 21.16)&quot; AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]&amp;start=0&amp;rows=1"/>
+<link rel="first" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(82.4, 21.16)&quot; AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]&amp;start=0&amp;rows=1"/>
+<link rel="last" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(82.4, 21.16)&quot; AND ingestiondate:[2022-02-09T00:00:00.000Z TO 2022-03-02T00:00:00.000Z]&amp;start=-1&amp;rows=1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_description.xml"/>
+</feed>

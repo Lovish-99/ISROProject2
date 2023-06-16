@@ -1,0 +1,56 @@
+*{ padding: 0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box; }
+body{ font-family: montserrat;}
+
+/*styling for navbar*/
+nav{background: #0082e6;height: 80px;width: 100%;}
+.logo{color: white;font-size: 20px;line-height: 80px;padding: 0 100px;font-weight: bold;font-family: Arial, Helvetica, sans-serif;}
+nav ul{float: right;margin-right: 20px;}
+nav ul li{display: inline-block;line-height: 80px;margin: 0 5px;}
+nav ul li a{color: white;font-size: 17px;padding: 7px 13px;border-radius: 3px;text-transform: uppercase;}
+a.active,a:hover{background: #1b9bff;transition: .5s;}
+.checkbtn{font-size: 30px;color: white;float: right;line-height: 80px;margin-right: 40px;cursor: pointer;display: none;}
+#check{display: none;}
+#struct{ width: 300px;}
+  
+/*styling for map*/
+.grid-container{margin: 15px 10px 20px 20px;display: grid;grid-template-columns: 23vw 73.6vw;grid-template-rows: 90vh;
+  box-shadow: 
+  inset 0 -3em 3em rgba(0,0,0,0.1), 
+        0 0  0 2px rgb(255,255,255),
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.sidebar{padding-left: 25px;}
+.grid-1{background-image: url('/static/bk.PNG');background-repeat: no-repeat;background-size: cover;}
+.inst{height: 30px; width: 100px; border-radius: 7px;margin-top: 15px;background-color: #0082e6;color: white;text-decoration: none;}
+
+/*styling for the grid-1 eelements*/
+h1{font-family: monospace;padding-left: 40px;}
+h3{text-decoration: underline;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+label{font-size: 18px;font-weight: lighter;}
+span{padding-left: 60px;}
+
+
+/*styling for footer*/
+.ft1{float: left;}
+.ft2{float: right;margin-top: 15px;}
+.a-ic{padding-right: 10px;}
+.abc{background-color: #0082e6;padding: 10px 0px 10px 0px;text-align: center;font-size: 15px;}
+.row{background-color: #0082e6;}
+.text-uppercase{color: black;font-size: 20px;}
+.text-uppercase:hover{color: whitesmoke;font-size: 22px;}
+.p3{color: white;}
+#i1{padding: 20px 0px 20px 40px;}
+
+@media (max-width: 952px){
+  label.logo{font-size: 30px;padding-left: 50px;}
+  nav ul li a{font-size: 16px;}
+}
+  
+@media (max-width: 858px){
+  .checkbtn{display: block;}
+  ul{position: fixed;width: 100%;height: 100vh;background: #2c3e50;top: 80px;left: -100%;text-align: center;transition: all .5s;}
+  nav ul li{display: block;margin: 50px 0;line-height: 30px;}
+  nav ul li a{font-size: 20px;}
+  a:hover,a.active{background: none;color: #0082e6;}
+  #check:checked ~ ul{left: 0;}
+}

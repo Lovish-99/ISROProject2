@@ -1,0 +1,57 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>API</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'stylea.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <script src="{% static 'main2.js' %}"></script>
+        <nav>
+            <label class="logo">RealTime Analysis</label>
+            <ul>
+                <li><a class="active" href="{% url 'room' %}">DataHub</a></li>
+                <li><a href="{% url 'feedback' %}">Visualize</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% if user.is_authenticated %}
+                <li><button type="submit" class="btn" style="background-color: #0082e6;">
+                    <a href="{% url 'signout' %}">SignOut</a>
+                </button></li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% block content %}
+
+        {% endblock %}
+        <footer class="page-footer">
+            <div style="background-color: #0082e6;">
+                <div>
+                    <div class="container">
+                        <div class="ft1" style="float: left;">
+                            <h3 class="mb-0" style="color: white;">Get connected with us on social networks!</h3>
+                        </div>
+                        <div class="ft2" style="float: right;margin-top: 18px;"> 
+                            <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-facebook white-text fa-2x"> </i></a>
+                            <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-twitter white-text fa-2x"> </i></a>
+                            <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-google-plus-g white-text fa-2x"> </i></a>
+                            <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-linkedin-in white-text fa-2x"> </i></a>
+                            <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-instagram white-text fa-2x"> </i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="abc" style="text-align: center;font-size: 20px;">© 2020 Copyright:
+                    <a href="https://mdbootstrap.com/" style="color: white;font-size: 20px;"> RiverGanga.com</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.w3.org/2005/Atom">
+<title>Sentinels Scientific Data Hub search results for: platformname:Sentinel-1 AND footprint: "Intersects(12, 45)" </title>
+<subtitle>Displaying 0 to 0 of 1243 total results. Request done in 1.452 seconds.</subtitle>
+<updated>2022-01-24T03:56:59.023Z</updated>
+<author>
+<name>Sentinels Scientific Data Hub</name>
+</author>
+<id>https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: "Intersects(12, 45)" </id>
+<opensearch:totalResults>1243</opensearch:totalResults>
+<opensearch:startIndex>0</opensearch:startIndex>
+<opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+<opensearch:Query role="request" searchTerms="platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; " startPage="1"/>
+<link rel="self" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=0&amp;rows=1"/>
+<link rel="first" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=0&amp;rows=1"/>
+<link rel="next" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=1&amp;rows=1"/>
+<link rel="last" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-1 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=1242&amp;rows=1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_description.xml"/>
+<entry>
+<title>S1A_IW_SLC__1SDV_20220123T151033_20220123T151103_041590_04F26B_8F83</title>
+<link href="https://apihub.copernicus.eu/apihub/odata/v1/Products('8b229ebc-69d5-4bef-ae7b-ac2d73da9732')/$value"/>
+<link rel="alternative" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('8b229ebc-69d5-4bef-ae7b-ac2d73da9732')/"/>
+<link rel="icon" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('8b229ebc-69d5-4bef-ae7b-ac2d73da9732')/Products('Quicklook')/$value"/>
+<id>8b229ebc-69d5-4bef-ae7b-ac2d73da9732</id>
+<summary>Date: 2022-01-23T15:10:33.556Z, Instrument: SAR-C SAR, Mode: VV VH, Satellite: Sentinel-1, Size: 7.78 GB</summary>
+<ondemand>false</ondemand>
+<date name="beginposition">2022-01-23T15:10:33.556Z</date>
+<date name="endposition">2022-01-23T15:11:03.361Z</date>
+<date name="ingestiondate">2022-01-23T18:12:45.411Z</date>
+<int name="missiondatatakeid">324203</int>
+<int name="orbitnumber">41590</int>
+<int name="lastorbitnumber">41590</int>
+<int name="relativeorbitnumber">43</int>
+<int name="lastrelativeorbitnumber">43</int>
+<int name="slicenumber">1</int>
+<str name="filename">S1A_IW_SLC__1SDV_20220123T151033_20220123T151103_041590_04F26B_8F83.SAFE</str>
+<str name="format">SAFE</str>
+<str name="identifier">S1A_IW_SLC__1SDV_20220123T151033_20220123T151103_041590_04F26B_8F83</str>
+<str name="size">7.78 GB</str>
+<str name="status">ARCHIVED</str>
+<str name="timeliness">Fast-24h</str>
+<str name="sensoroperationalmode">IW</str>
+<str name="swathidentifier">IW1 IW2 IW3</str>
+<str name="orbitdirection">ASCENDING</str>
+<str name="producttype">SLC</str>
+<str name="platformname">Sentinel-1</str>
+<str name="platformidentifier">2014-016A</str>
+<str name="instrumentname">Synthetic Aperture Radar (C-band)</str>
+<str name="instrumentshortname">SAR-C SAR</str>
+<str name="productclass">S</str>
+<str name="polarisationmode">VV VH</str>
+<str name="acquisitiontype">NOMINAL</str>
+<str name="gmlfootprint">&lt;gml:Polygon srsName="http://www.opengis.net/gml/srs/epsg.xml#4326" xmlns:gml="http://www.opengis.net/gml"&gt;
+   &lt;gml:outerBoundaryIs&gt;
+      &lt;gml:LinearRing&gt;
+         &lt;gml:coordinates&gt;12.243820,44.192310 12.686799,46.470707 10.888640,46.825893 10.441031,44.562626 12.243820,44.192310&lt;/gml:coordinates&gt;
+      &lt;/gml:LinearRing&gt;
+   &lt;/gml:outerBoundaryIs&gt;
+&lt;/gml:Polygon&gt;</str>
+<str name="footprint">MULTIPOLYGON (((44.562626 10.441031, 46.825893 10.88864, 46.470707 12.686799, 44.19231 12.24382, 44.562626 10.441031)))</str>
+<str name="uuid">8b229ebc-69d5-4bef-ae7b-ac2d73da9732</str>
+</entry>
+</feed>

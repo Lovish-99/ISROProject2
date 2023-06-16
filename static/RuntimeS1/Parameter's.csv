@@ -1,0 +1,20 @@
+,Parameters
+0,Potassium(mg/l)
+1,Chloride(mg/l)
+2,Conductivity(µS/cm)
+3,pH
+4,TOC(mg/l)
+5,Ammonia(mg/l)
+6,BTX(µg/ml)
+7,Floride(mg/l)
+8,"Color(Pt.Scale,Hz units)"
+9,Temperature(°C)
+10,Color(µS/cm)
+11,Nitrate(mg/l)
+12,Water Level(cm.)
+13,COD(mg/l)
+14,Turbidity(NTU)
+15,TSS(mg/l)
+16,TOC(mg/l )
+17,BOD(mg/l)
+18,DO(mg/l)

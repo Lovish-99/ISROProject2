@@ -1,0 +1,182 @@
+<!-- chat/templates/status/room.html -->
+<!DOCTYPE html>
+<html>
+{% comment %} Head starts {% endcomment %}
+<head>
+    <meta charset="utf-8"/>
+    <title>Sentinel Data Room</title>
+
+    {% comment %} load the static folder using jinga comment {% endcomment %}
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'stylehub.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+{% comment %} Head ends {% endcomment %}
+{% comment %} Body starts{% endcomment %}
+<body>
+    {% comment %} Navbar starts {% endcomment %}
+    <nav class="navbar navbar-expand-lg navbar-info bg-primary">
+        <a class="navbar-brand" href="#" style="color: white;"}><i class="fas fa-bars"></i> Sentinel Data </a>
+        <ul>
+            <li><a class="active" href="{% url 'room' %}">DataHub</a></li>
+            <li><a href="{% url 'feedback' %}">Visualize</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li><button type="submit" class="btn" style="background-color: #0082e6;">
+                <a href="{% url 'signout' %}">SignOut</a>
+            </button></li>
+            {% else %}
+            <li><button type="submit" class="btn" style="background-color: #0082e6;">
+                <a href="{% url 'signup' %}">SignUp</a>
+            </button></li>
+            <li><button type="submit" class="btn" style="background-color: #0082e6;">
+                <a href="{% url 'signin' %}">SignIn</a>
+            </button></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% comment %} Navbar ends {% endcomment %}
+
+    {% comment %} show the message for the authentication part {% endcomment %}
+    {% if user.is_authenticated %}
+    <h4>You're successfully logged in.</h4>
+    {% else %}
+    <h4>You're not logged in.</h4>
+    {% endif %}
+
+    {% comment %} Container starts {% endcomment %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 id="status">Status of Sentinel Data</h2>
+            </div>
+            <div class="col-sm-6">
+                <textarea id="chat-log" cols="70" rows="3"></textarea>
+            </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4><strong>Enter the Sentinel Data Parameters: </strong></h4><hr>
+                
+                <div class="row">
+                    <label for="starttime">Sensing Start Time: </label>
+                    <input type="date" id="starttime" required><br>
+                    <label for="endtime">Sensing End Time: </label>
+                    <input type="date" id="endtime" required><br>
+                </div>
+                <div class="row">
+                    <form id="options-form" automplete="off">
+                        {% csrf_token %}
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="interaction" value="draw" id="draw" checked>
+                            Draw &nbsp;
+                          </label>
+                        </div>
+                        <div class="radio">
+                          {% comment %} <label>
+                            <input type="radio" name="interaction" value="modify">
+                            Modify &nbsp;
+                          </label> {% endcomment %}
+                        </div>
+                        <div class="form-group">
+                          <label>Draw type &nbsp;</label>
+                          <select name="draw-type" id="draw-type">
+                            <option value="Point">Point</option>
+                            {% comment %} <option value="LineString">LineString</option> {% endcomment %}
+                            <option value="Polygon">Polygon</option>
+                          </select>
+                        </div>
+                      </form>
+                </div>
+                <div>
+                    <button class="btnnn" id="idhai">gepoint</button>
+                </div>
+                <div class="row">
+                    <label for="point">Co-ordinates Point: </label>
+                    {% comment %} <input type="textarea" id="point"><br> {% endcomment %}
+                    <textarea id="point" cols="50" rows="3" required></textarea><br>
+
+                    <label>PlatForm Name: </label><br>
+                    <input type="radio" onclick="javascript:Check();" name="yesno" id="plateform1" value="Sentinel-1">
+                    <label for="plateform1">Sentinel-1 </label>
+                    <input type="radio" onclick="javascript:Check();" name="yesno" id="plateform2" value="Sentinel-2">
+                    <label for="plateform2">Sentinel-2</label>
+                    <input type="radio" onclick="javascript:Check();" name="yesno" id="plateform3" value="Sentinel-3">
+                    <label for="plateform3">Sentinel-3</label><br>
+
+                    <div class="data" id="datahub" style="visibility: visible;">
+                        <div class="innerdata" id="datahub3" style="visibility: hidden;">
+                            <label for="cloudper">Cloud Coverage %: </label>
+                            <input type="text" id="cloudper" required><br>
+                        </div>
+                        <div class="innerdata" id="datahub1" style="visibility: hidden;">
+                            <label for="ptype">Product Type: </label>
+                            <select id="ptype" style="width: 220px; height: 30px;" name="pname">
+                                <option selected disabled="true">Select an Option</option>
+                            </select>
+                        </div>
+                        <div class="innerdata" id="datahub2" style="visibility: hidden;">
+                            <label for="sensormode">Sensor Operation Mode: </label>
+                            <select id="sensormode" style="width: 150px; height: 30px;" name="pname">
+                                <option selected disabled="true">Select an Option</option>
+                            </select>
+                            <label for="polarmode">Polarisation Mode: </label>
+                            <select id="polarmode" style="width: 150px; height: 30px;" name="pname">
+                                <option selected disabled="true">Select an Option</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    {% if user.is_authenticated %}
+                    <input id="chat-message-submit" type="button" value="Send" class="btn btn-primary">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="map" id="map" style="height: 400px; width: 800px"></div>
+            </div>
+        </div>
+    </div><br>
+    {% comment %} Container ends {% endcomment %}
+    {% comment %} load the sentinel-3 js file {% endcomment %}
+    <script src="{% static 'sentinel3.js' %}"></script>
+    
+    {% comment %} {{ room_name|json_script:"room-name" }} {% endcomment %}
+    <script src="{% static 'sentinel2.js' %}"></script>
+
+    {% comment %} Footer starts {% endcomment %}
+    <footer class="page-footer">
+        <div style="background-color: #0082e6;">
+            <div>
+                <div class="container">
+                    <div class="ft1" style="float: left;">
+                        <h3 class="mb-0" style="color: white;">Get connected with us on social networks!</h3>
+                    </div>
+                    <div class="ft2" style="float: right;margin-top: 18px;"> 
+                        <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-facebook white-text fa-2x"> </i></a>
+                        <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-twitter white-text fa-2x"> </i></a>
+                        <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-google-plus-g white-text fa-2x"> </i></a>
+                        <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-linkedin-in white-text fa-2x"> </i></a>
+                        <a href="#" class="a-ic" style="color: white;padding-right: 15px;"><i class="fab fa-instagram white-text fa-2x"> </i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="abc" style="text-align: center;font-size: 20px;">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/" style="color: white;font-size: 20px;"> RiverGanga.com</a>
+            </div>
+        </div>
+    </footer>
+    {% comment %} Footer ends {% endcomment %}
+</body>
+{% comment %} Body ends {% endcomment %}
+</html>

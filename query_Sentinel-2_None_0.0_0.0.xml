@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns="http://www.w3.org/2005/Atom">
+<title>Sentinels Scientific Data Hub search results for: platformname:Sentinel-2 AND footprint: "Intersects(12, 45)" </title>
+<subtitle>Displaying 0 to 0 of 1248 total results. Request done in 1.379 seconds.</subtitle>
+<updated>2022-01-24T04:13:49.978Z</updated>
+<author>
+<name>Sentinels Scientific Data Hub</name>
+</author>
+<id>https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-2 AND footprint: "Intersects(12, 45)" </id>
+<opensearch:totalResults>1248</opensearch:totalResults>
+<opensearch:startIndex>0</opensearch:startIndex>
+<opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+<opensearch:Query role="request" searchTerms="platformname:Sentinel-2 AND footprint: &quot;Intersects(12, 45)&quot; " startPage="1"/>
+<link rel="self" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-2 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=0&amp;rows=1"/>
+<link rel="first" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-2 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=0&amp;rows=1"/>
+<link rel="next" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-2 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=1&amp;rows=1"/>
+<link rel="last" type="application/xml" href="https://apihub.copernicus.eu/apihub/search?q=platformname:Sentinel-2 AND footprint: &quot;Intersects(12, 45)&quot; &amp;start=1247&amp;rows=1"/>
+<link rel="search" type="application/opensearchdescription+xml" href="opensearch_description.xml"/>
+<entry>
+<title>S2B_MSIL2A_20220122T072209_N0301_R006_T38PNU_20220122T095007</title>
+<link href="https://apihub.copernicus.eu/apihub/odata/v1/Products('293c1192-f29d-470c-b5ee-44f16b8733cd')/$value"/>
+<link rel="alternative" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('293c1192-f29d-470c-b5ee-44f16b8733cd')/"/>
+<link rel="icon" href="https://apihub.copernicus.eu/apihub/odata/v1/Products('293c1192-f29d-470c-b5ee-44f16b8733cd')/Products('Quicklook')/$value"/>
+<id>293c1192-f29d-470c-b5ee-44f16b8733cd</id>
+<summary>Date: 2022-01-22T07:22:09.024Z, Instrument: MSI, Satellite: Sentinel-2, Size: 800.66 MB</summary>
+<ondemand>false</ondemand>
+<date name="generationdate">2022-01-22T09:50:07Z</date>
+<date name="beginposition">2022-01-22T07:22:09.024Z</date>
+<date name="endposition">2022-01-22T07:22:09.024Z</date>
+<date name="ingestiondate">2022-01-22T11:54:31.553Z</date>
+<int name="orbitnumber">25486</int>
+<int name="relativeorbitnumber">6</int>
+<double name="illuminationazimuthangle">143.940553789196</double>
+<double name="illuminationzenithangle">39.2216403726408</double>
+<double name="vegetationpercentage">5.21E-4</double>
+<double name="notvegetatedpercentage">0.007515</double>
+<double name="waterpercentage">75.340277</double>
+<double name="unclassifiedpercentage">0.0</double>
+<double name="mediumprobacloudspercentage">1.634859</double>
+<double name="highprobacloudspercentage">2.667835</double>
+<double name="snowicepercentage">0.0</double>
+<double name="cloudcoverpercentage">24.651691</double>
+<str name="level1cpdiidentifier">S2B_OPER_MSI_L1C_TL_VGS1_20220122T091432_A025486_T38PNU_N03.01</str>
+<str name="gmlfootprint">&lt;gml:Polygon srsName="http://www.opengis.net/gml/srs/epsg.xml#4326" xmlns:gml="http://www.opengis.net/gml"&gt;
+   &lt;gml:outerBoundaryIs&gt;
+      &lt;gml:LinearRing&gt;
+         &lt;gml:coordinates&gt;12.664549599027806,44.99981581276403 12.662629591466183,46.01094843682277 11.66983272127397,46.007202499480215 11.67159793289093,44.999816495386646 12.664549599027806,44.99981581276403&lt;/gml:coordinates&gt;
+      &lt;/gml:LinearRing&gt;
+   &lt;/gml:outerBoundaryIs&gt;
+&lt;/gml:Polygon&gt;</str>
+<str name="footprint">MULTIPOLYGON (((46.007202499480215 11.66983272127397, 46.01094843682277 12.662629591466183, 44.99981581276403 12.664549599027806, 44.999816495386646 11.67159793289093, 46.007202499480215 11.66983272127397)))</str>
+<str name="format">SAFE</str>
+<str name="processingbaseline">03.01</str>
+<str name="platformname">Sentinel-2</str>
+<str name="filename">S2B_MSIL2A_20220122T072209_N0301_R006_T38PNU_20220122T095007.SAFE</str>
+<str name="instrumentname">Multi-Spectral Instrument</str>
+<str name="instrumentshortname">MSI</str>
+<str name="size">800.66 MB</str>
+<str name="s2datatakeid">GS2B_20220122T072209_025486_N03.01</str>
+<str name="producttype">S2MSI2A</str>
+<str name="platformidentifier">2017-013A</str>
+<str name="orbitdirection">DESCENDING</str>
+<str name="platformserialidentifier">Sentinel-2B</str>
+<str name="processinglevel">Level-2A</str>
+<str name="datastripidentifier">S2B_OPER_MSI_L2A_DS_VGS1_20220122T095007_S20220122T073449_N03.01</str>
+<str name="granuleidentifier">S2B_OPER_MSI_L2A_TL_VGS1_20220122T095007_A025486_T38PNU_N03.01</str>
+<str name="identifier">S2B_MSIL2A_20220122T072209_N0301_R006_T38PNU_20220122T095007</str>
+<str name="uuid">293c1192-f29d-470c-b5ee-44f16b8733cd</str>
+</entry>
+</feed>
